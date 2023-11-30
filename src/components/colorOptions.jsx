@@ -1,6 +1,12 @@
-const ColorOptions = () => {
+import Color from "./color"
+
+const ColorOptions = ({colors}) => {
     return (
-        <div></div>
+        <div data-testid="color-options">
+            <Color/>
+            <Color/>
+            <Color/>
+      </div>
     )
 }
 
