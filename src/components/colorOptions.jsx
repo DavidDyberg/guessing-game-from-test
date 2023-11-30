@@ -3,9 +3,9 @@ import Color from "./color"
 const ColorOptions = ({colors}) => {
     return (
         <div data-testid="color-options">
-            <Color/>
-            <Color/>
-            <Color/>
+        {colors.map((color, index) => (
+          <Color key={index} color={color} />
+        ))}
       </div>
     )
 }
