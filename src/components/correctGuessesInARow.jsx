@@ -1,7 +1,5 @@
-import { useState } from "react";
 
-const CorrectGuessesInARow = () => {
-  const [correctGuessesInARow, setCorrectGuessesInARow] = useState(0);
+const CorrectGuessesInARow = ({correctGuessesInARow}) => {
 
   return (
     <>

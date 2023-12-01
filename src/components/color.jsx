@@ -1,11 +1,14 @@
+import React from 'react';
 
-import { mockColors } from "../utils"
+const ColorButton = ({ correctColor, handleClick }) => {
 
-const Color = () => {
-  const buttonColor = "ABD232"
-  return(
-  <button>{buttonColor}</button>
-  )
-}
+  console.log({correctColor})
 
-export default Color
+  return (
+    <button style={{ backgroundColor: correctColor }} onClick={() => handleClick(correctColor)}>
+      {correctColor}
+    </button>
+  );
+};
+
+export default ColorButton;
