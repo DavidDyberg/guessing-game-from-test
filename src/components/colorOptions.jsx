@@ -18,7 +18,7 @@ const ColorOptions = ({ correctColor, setCorrectGuessesInARow, setWrongGuess, co
       {colors.map((color, index) => (
         <ColorButton
           key={index}
-          correctColor={color}
+          color={color}
           handleClick={() => handleClick(color)}
         />
       ))}

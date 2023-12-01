@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const ColorButton = ({ correctColor, handleClick }) => {
+const ColorButton = ({ color, handleClick }) => {
+  const bgColor = "#" + color;
 
   return (
-    <button style={{ backgroundColor: correctColor, padding: '10px', margin: '5px' }} onClick={handleClick}>
-      {correctColor}
+    <button
+      style={{ backgroundColor: bgColor, padding: "10px", margin: "5px" }}
+      onClick={() => handleClick(color)}>
+      {color}
     </button>
   );
 };
