@@ -14,7 +14,7 @@ const ColorOptions = ({ correctColor, setCorrectGuessesInARow, setWrongGuess, co
   };
 
   return (
-    <div>
+    <div data-testid="color-options">
       {colors.map((color, index) => (
         <ColorButton
           key={index}
