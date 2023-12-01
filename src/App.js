@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/header';
-import CorrectGuessesInARow from './components/correctGuessesInARow';
-import ColorToGuess from './components/colorToGuess';
-import ColorOptions from './components/colorOptions';
-import mockColors from './utils'; // Ensure correct path to your colors
+import React, { useState, useEffect } from "react";
+import Header from "./components/header";
+import CorrectGuessesInARow from "./components/correctGuessesInARow";
+import ColorToGuess from "./components/colorToGuess";
+import ColorOptions from "./components/colorOptions";
+import mockColors from "./utils";
+import WrongGuess from "./components/wrongGuess";
 
 const getRandomColors = () => {
   const randomIndexes = [];
@@ -13,7 +14,7 @@ const getRandomColors = () => {
       randomIndexes.push(randomIndex);
     }
   }
-  return randomIndexes.map(index => mockColors[index]);
+  return randomIndexes.map((index) => mockColors[index]);
 };
 
 function App() {
@@ -22,18 +23,21 @@ function App() {
   const [wrongGuess, setWrongGuess] = useState(false);
   const [colors, setColors] = useState(getRandomColors());
 
-  // Update correctColor when colors state changes
   useEffect(() => {
     setCorrectColor(getCorrectColor());
-  }, [correctGuessesInARow]);
+  }, [colors, correctGuessesInARow]);
 
   const getCorrectColor = () => {
     if (colors.length > 0) {
       const randomIndex = Math.floor(Math.random() * colors.length);
       return colors[randomIndex];
     }
-    return null; // Return null or handle empty colors array case
+    return null;
   };
+
+  useEffect(() => {
+    setColors(getRandomColors());
+  }, [correctGuessesInARow]);
 
   return (
     <div className="App">
@@ -41,11 +45,12 @@ function App() {
       <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow} />
       <ColorToGuess correctColor={correctColor} />
       <ColorOptions
-        colors={colors} // Pass colors to ColorOptions component
+        colors={colors}
         correctColor={correctColor}
         setCorrectGuessesInARow={setCorrectGuessesInARow}
         setWrongGuess={setWrongGuess}
       />
+      {wrongGuess && <WrongGuess />}{" "}
     </div>
   );
 }

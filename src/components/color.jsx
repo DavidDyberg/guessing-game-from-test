@@ -2,10 +2,8 @@ import React from 'react';
 
 const ColorButton = ({ correctColor, handleClick }) => {
 
-  console.log({correctColor})
-
   return (
-    <button style={{ backgroundColor: correctColor }} onClick={() => handleClick(correctColor)}>
+    <button style={{ backgroundColor: correctColor, padding: '10px', margin: '5px' }} onClick={handleClick}>
       {correctColor}
     </button>
   );
