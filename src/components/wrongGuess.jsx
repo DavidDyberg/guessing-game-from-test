@@ -1,7 +1,6 @@
-import { useState } from "react";
 
 const WrongGuess = () => {
-  return <p>Wrong guess</p>;
+  return <p data-testid="wrong-guess">Wrong guess</p>;
 };
 
 export default WrongGuess;
