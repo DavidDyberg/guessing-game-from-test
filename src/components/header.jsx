@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <header>
-            <h1>color guessing game</h1>
+            <h1 className='text-center'>color guessing game</h1>
         </header>
     )
 }
