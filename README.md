@@ -48,8 +48,10 @@
 ![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/ba9518e6-65ac-4295-a06a-4f045f67647d)
 
 
-
-
+Feedback:
+Overall a good job! Easy to follow and easy to understand.
+The one thing we could give you, which is neither negative or positive is that the tests didn't provide much 
+guidance or frames. It was fairly "easy" to appease the tests and then disregard their structure. 
     
 
 
