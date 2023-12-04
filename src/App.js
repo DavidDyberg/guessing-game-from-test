@@ -40,7 +40,7 @@ function App() {
   }, [correctGuessesInARow]);
 
   return (
-    <div data-testid="app" className="App">
+    <div data-testid="app" className="text-center text-white">
       <Header />
       <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow} />
       <ColorToGuess correctColor={correctColor} />

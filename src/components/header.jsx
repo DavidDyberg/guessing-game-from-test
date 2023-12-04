@@ -1,7 +1,7 @@
 const Header = () => {
     return (
-        <header>
-            <h1 className='text-center'>color guessing game</h1>
+        <header className="mt-4">
+            <h1 className='text-center text-3xl md:text-5xl uppercase'>color guessing game</h1>
         </header>
     )
 }
