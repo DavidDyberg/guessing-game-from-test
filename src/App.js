@@ -40,7 +40,7 @@ function App() {
   }, [correctGuessesInARow]);
 
   return (
-    <div data-testid="app" className="text-center text-white">
+    <div data-testid="app" className="text-center text-white flex flex-col">
       <Header />
       <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow} />
       <ColorToGuess correctColor={correctColor} />
