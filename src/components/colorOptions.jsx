@@ -14,7 +14,7 @@ const ColorOptions = ({ correctColor, setCorrectGuessesInARow, setWrongGuess, co
   };
 
   return (
-    <div data-testid="color-options" className='flex md:flex-row flex-col justify-center'>
+    <div data-testid="color-options" className='flex md:flex-row flex-col justify-center my-2'>
       {colors.map((color, index) => (
         <ColorButton
           key={index}
